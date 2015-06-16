@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFF"
+    android:background="#EAE6CA"
     tools:context="${relativePackage}.${activityClass}" >
 
     <LinearLayout
@@ -80,22 +80,6 @@
             android:text="TextView" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:background="@color/common_signin_btn_default_background"
-        android:layout_below="@+id/linearLayout3"
-        android:layout_marginTop="46dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="10dp"
-        android:text="Descrizione giornata"
-        android:textStyle="bold"
-        android:textColor="#FFF" />
-
     <LinearLayout
         android:id="@+id/LinearLayout01"
         android:layout_width="wrap_content"
@@ -121,15 +105,6 @@
             android:autoLink="web" />
     </LinearLayout>
 
-    <ImageView
-        android:id="@+id/imageBand"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayout1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="44dp" />
-
     <Button
         android:id="@+id/btnMenuOdierno"
         android:layout_width="wrap_content"
@@ -138,9 +113,32 @@
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/btnDetail"
         android:layout_marginBottom="10dp"
+        android:layout_marginRight="5dp"
         android:background="@color/common_signin_btn_default_background"
         android:text="Menù odierno"
         android:textColor="#FFF"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnMenuOdierno"
+        android:layout_alignLeft="@+id/LinearLayout01"
+        android:layout_alignParentRight="true"
+        android:background="@color/common_signin_btn_default_background"
+        android:text="Descrizione giornata"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#FFF"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageBand"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#fff">
+    android:background="#EAE6CA">
     <!-- android:background="#FF0099CC" > -->
 
     <com.loopj.android.image.SmartImageView

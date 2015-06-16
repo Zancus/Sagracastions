@@ -3,9 +3,10 @@ package com.Zanca.sagracastions;
 import com.Zanca.sagracastions.date.dateFragment;
 import com.Zanca.sagracastions.gallery.galleryFragment;
 import com.Zanca.sagracastions.mappa.Parco_mappa_Activity;
+import com.Zanca.sagracastions.meteo.fragmentMeteo;
+import com.Zanca.sagracastions.meteo.meteoFragment;
 import com.Zanca.sagracastions.navigationdrawer.NavigationDrawerFragment;
 import com.Zanca.sagracastions.storia.storiaFragment;
-import com.Zanca.sagracastions.weather.weatherFragment;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
@@ -16,6 +17,7 @@ import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -38,7 +40,8 @@ public class MainActivity extends Activity implements
 	 * navigation drawer.
 	 */
 	private dateFragment datefragment;
-	private weatherFragment meteofragment;
+	private meteoFragment meteofragment;
+	private fragmentMeteo fragMeteo;
 	private storiaFragment storiafragment;
 	private galleryFragment galleryfragment;
 	private NavigationDrawerFragment mNavigationDrawerFragment;
@@ -99,15 +102,24 @@ public class MainActivity extends Activity implements
 			}
 				break;
 			case 2: 
-				Intent start_map = new Intent(this, Parco_mappa_Activity.class);
-				startActivity(start_map);
+			{
+//				Intent start_map = new Intent(this, Parco_mappa_Activity.class);
+//				startActivity(start_map);
+				String url = "http://maps.google.com/maps?"
+						+ "daddr=" + 45.97554 + "," + 12.801089;
+				Intent mapIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+				startActivity(mapIntent);
+			}
 				break;
 			case 3:
 			{
-				if(fragmentManager.findFragmentByTag(Tools.FRAGMENT_METEO) == null)				
-					meteofragment = weatherFragment.newInstance();
+				if(fragmentManager.findFragmentByTag(Tools.FRAGMENT_METEO) == null)	
+				{
+					meteofragment = meteoFragment.newInstance();
+					fragMeteo = fragMeteo.newInstance();
+				}
 				else
-					meteofragment = (weatherFragment) fragmentManager.findFragmentByTag(Tools.FRAGMENT_METEO);
+					meteofragment = (meteoFragment) fragmentManager.findFragmentByTag(Tools.FRAGMENT_METEO);
 				fragmentManager
 				.beginTransaction()
 				.replace(R.id.container,

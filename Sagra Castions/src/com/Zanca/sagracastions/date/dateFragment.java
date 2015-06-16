@@ -57,13 +57,21 @@ public class dateFragment extends Fragment {
 	
 	private void initGiornateArrayList()
 	{
-		date.add(new Giornata(1, 0, "Giovedì 20 Agosto"));
-		date.add(new Giornata(2, 0, "Venerdì 21 Agosto"));
-		date.add(new Giornata(3, R.drawable.absolute5, "Sabato 22 Agosto"));
-		date.add(new Giornata(4, R.drawable.collegium, "Domenica 23 Agosto"));
-		date.add(new Giornata(5, 0,"Giovedì 27 Agosto"));
-		date.add(new Giornata(6, 0,"Venerdì 28 Agosto"));
-		date.add(new Giornata(7, 0,"Sabato 29 Agosto"));
-		date.add(new Giornata(8, R.drawable.gimmy, "Domenica 30 Agosto"));
+		date.add(new Giornata(1, R.drawable.arcdisanmarc, "Giovedì 20.08.2015"));
+		date.add(new Giornata(2, 0, "Venerdì 21.08.2015"));
+		date.add(new Giornata(3, R.drawable.absolute5, "Sabato 22.08.2015"));
+		date.add(new Giornata(4, R.drawable.collegium, "Domenica 23.08.2015"));
+		date.add(new Giornata(5, R.drawable.siroliverskardy, "Giovedì 27.08.2015"));
+		date.add(new Giornata(6, 0,"Venerdì 28.08.2015"));
+		date.add(new Giornata(7, R.drawable.direstraitsovergold, "Sabato 29.08.2015"));
+		date.add(new Giornata(8, R.drawable.gimmy, "Domenica 30.08.2015"));
+//		date.add(new Giornata(1, R.drawable.arcdisanmarc, "Giovedì 20.08.2015"));
+//		date.add(new Giornata(2, 0, "Venerdì 21.08.2015"));
+//		date.add(new Giornata(3, R.drawable.absolute5, "Sabato 22.08.2015"));
+//		date.add(new Giornata(4, R.drawable.collegium, "Domenica 23.08.2015"));
+//		date.add(new Giornata(5, R.drawable.siroliverskardy, "Giovedì 27.08.2015"));
+//		date.add(new Giornata(6, 0,"Venerdì 28.08.2015"));
+//		date.add(new Giornata(7, R.drawable.direstraitsovergold, "Sabato 29.08.2015"));
+//		date.add(new Giornata(8, R.drawable.gimmy, "Domenica 30.08.2015"));
 	}
 }

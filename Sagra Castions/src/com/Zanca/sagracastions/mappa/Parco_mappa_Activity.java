@@ -17,6 +17,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.os.Bundle;
 import android.provider.OpenableColumns;
+import android.util.Log;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.Menu;
@@ -40,12 +41,6 @@ public class Parco_mappa_Activity extends Activity implements OnMapReadyCallback
 		MapFragment mappa = (MapFragment) getFragmentManager().findFragmentById(R.id.map_parco);
 		mappa.getMapAsync(this);
 	}
-	
-	private void aboutAction() {
-		// TODO Auto-generated method stub
-		DialogInfoMappa infoDialog = DialogInfoMappa.newInstance();
-		infoDialog.show(getFragmentManager(), "info dialog");
-	}
 
 	@Override
 	public void onMapReady(GoogleMap arg0) {
@@ -55,15 +50,24 @@ public class Parco_mappa_Activity extends Activity implements OnMapReadyCallback
 		{
 			drawMarker();
 			parcoMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ParcoBurgos, 10));
+			parcoMap.getUiSettings().setScrollGesturesEnabled(true);
+			parcoMap.getUiSettings().setRotateGesturesEnabled(true);
 			parcoMap.setMyLocationEnabled(true);
-			parcoMap.getUiSettings().setZoomControlsEnabled(true);
+			parcoMap.getUiSettings().setZoomControlsEnabled(
+					true);
+			parcoMap.getUiSettings().setMapToolbarEnabled(true);
 		}
 	}
 	
 	private void drawMarker(){
 		ParcoBurgos = new LatLng(45.97554, 12.801089);
-		Marker Pn = parcoMap.addMarker(new MarkerOptions().title("Parco Burgos")
-				.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
-				.position(ParcoBurgos));
+		MarkerOptions parco = new MarkerOptions().position(
+				ParcoBurgos).title("Parco burgos");
+		parcoMap.addMarker(parco).showInfoWindow();
+		
+//		Marker Pn = parcoMap.addMarker(new MarkerOptions().title("Parco Burgos")
+//				.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+//				.position(ParcoBurgos));
+		
 	}
 }

@@ -5,8 +5,8 @@
     <string name="title_section1">Date</string>
     <string name="title_section2">Menù</string>
     <string name="title_section3">Galleria fotografica</string>
-    <string name="title_section4">Mappa - Come raggiungerci</string>
-    <string name="title_section5">Storia asociazione</string>
+    <string name="title_section4">Come raggiungerci</string>
+    <string name="title_section5">Storia associazione</string>
     <string name="title_section6">Meteo</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
